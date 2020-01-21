@@ -1,4 +1,4 @@
-# Flash Zigbee USBStick CC2531
+# Flash Zigbee USBStick CC2531 with Z-Stack_3.0.x firmware
 
 Simply start the addon and wait until it is finished. Look into the log for progress and errors.
 

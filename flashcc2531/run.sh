@@ -1,13 +1,13 @@
 #!/bin/bash
 echo "Startet"
-cd /flash_cc2531
+cd /hassio-flashcc2531/flash_cc2531
 if ! ./cc_chipid | grep "ID = b524"; then echo "ChipID not found." && exit 1; fi
 
 echo "Downloading firmware"
-if ! wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip; then echo "firmware not found" && exit 1; fi
+if ! wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.0.x/bin/CC2531_20190425.zip; then echo "firmware not found" && exit 1; fi
 
 echo "unziping"
-if ! unzip CC2531_DEFAULT_20190608.zip; then echo "unzip failed" && exit 1; fi
+if ! unzip CC2531_20190425.zip; then echo "unzip failed" && exit 1; fi
 
 echo "backup firmware"
 ./cc_read save.hex
@@ -17,6 +17,6 @@ echo "erase"
 ./cc_erase
 
 echo "flash firmware"
-./cc_write CC2531ZNP-Prod.hex
+./cc_write CC2531ZNP-with-SBL.hex
 
 echo "Finished"
