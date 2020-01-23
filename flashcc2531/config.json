@@ -1,6 +1,6 @@
 {
   "name": "flashcc2531_3.0",
-  "version": "1",
+  "version": "2",
   "slug": "flashcc2531_3.0",
   "description": "Flash Zigbee USBStick CC2531 with Z-Stack_3.0.x firmware",
   "url":"https://github.com/juanrodgil/hassio-flashcc2531",
