@@ -6,9 +6,8 @@ ENV LANG C.UTF-8
 # Install requirements for add-on
 RUN apk add --no-cache git make g++ wiringpi-dev grep wget unzip
 
-RUN git clone https://github.com/juanrodgil/hassio-flashcc2531/ && \
-              cd hassio-flashcc2531 && \
-              cd flashcc2531 && \
+RUN git clone https://github.com/jmichault/flash_cc2531.git && \
+              cd flash_cc2531 && \
               make all
 
 # Copy data for add-on
